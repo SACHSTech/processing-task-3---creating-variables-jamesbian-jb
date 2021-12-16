@@ -1,7 +1,9 @@
 import processing.core.PApplet;
 
+
 public class Sketch extends PApplet {
-	
+	public float randheight = random(1,400);
+  public float randwidth = random(1, 400);
 	
   /**
    * Called once at the beginning of execution, put your size all in this method
@@ -16,21 +18,30 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
+    
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
 
-    stroke(255);
-    line(50, 125, 70, 50);  
-  }
+      stroke(122);
+      fill(255,105,105);
+      ellipse(randwidth, randheight, 30, 60); 
+      ellipse(randwidth - 40, randheight, 30, 60);
+      fill(245,245,245);
+      stroke(122);
+      ellipse(randwidth - 24, randheight - 85, 70, 150);
+      
+      //Antenna
+      line(randwidth - 25, randheight - 160, randwidth - 25, randheight - 180);
   
-  // define other methods down here.
-}
+      //Window
+      fill(197,224,255);
+      ellipse(randwidth- 25, randheight - 115, 40, 40); 
+  }
+    }
+
+    
+  
